@@ -1,4 +1,4 @@
-<body style="background-color: white; color: black;">
+<body style="background-color: white; color: black; width:960px;">
 <?php
 require_once('BattleNet.Parser.php');
 require_once('Markup.Class.php');

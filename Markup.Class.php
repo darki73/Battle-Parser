@@ -13,7 +13,7 @@ Class Markup
 
 	public static function PrepareSQLData($Data)
 	{
-		echo "<div id='SQLZone' style='float:left; width:50%;'><textarea rows='30' cols='110' readonly>";
+		echo "<div id='SQLZone' style='float:left; width:60%;'><textarea rows='55' cols='60' readonly>";
 		echo $Data;
 		echo "</textarea><br /><br />";
 		if(isset($Data['itemset']))

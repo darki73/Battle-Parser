@@ -197,6 +197,7 @@ Class Parser
 			"+10 Agility" => "2782",
 			"+20 Agility" => "4133",
 			"+30 Agility" => "4145",
+			"+60 Agility" => "4827",
 			// Stamina Bonuses
 			"+4 Stamina" => "2895",
 			"+6 Stamina" => "2882",
