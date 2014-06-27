@@ -148,13 +148,64 @@ Class Parser
 	private static function GetSocketBonus($Bonus)
 	{
 		$BonusMask = array(
-			"+8 Strength" => "3312",
-			"+8 Agility" => "3313",
-			"+12 Stamina" => "3305",
-			"+8 Intellect" => "3353",
-			"+9 Healing" => "2872",
+			// Spell Power Bonuses
+			"+4 Spell Power" => "2900",
+			"+5 Spell Power" => "3752",
+			"+7 Spell Power" => "3602",
 			"+9 Spell Power" => "3753",
+			// Attack Power Bonuses
+			"+4 Attack Power" => "3114",
+			"+8 Attack Power" => "2936",
+			"+12 Attack Power" => "3764",
+			"+16 Attack Power" => "1589",
+			"+32 Attack Power" => "1597",
 			"+16 Attack Power" => "3877",
+			// Strenght Bonuses
+			"+2 Strength" => "2892",
+			"+4 Strength" => "2927",
+			"+6 Strength" => "3357",
+			"+8 Strength" => "3312",
+			"+10 Strength" => "4135",
+			"+20 Strength" => "4136",
+			"+30 Strength" => "4158",
+			// Agility Bonuses
+			"+2 Agility" => "3149",
+			"+4 Agility" => "2877",
+			"+6 Agility" => "3355",
+			"+8 Agility" => "3313",
+			"+10 Agility" => "2782",
+			"+20 Agility" => "4133",
+			"+30 Agility" => "4145",
+			// Stamina Bonuses
+			"+4 Stamina" => "2895",
+			"+6 Stamina" => "2882",
+			"+8 Stamina" => "3307",
+			"+12 Stamina" => "3766",
+			"+15 Stamina" => "4154",
+			"+30 Stamina" => "4134",
+			"+40 Stamina" => "4159",
+			// Intellect Bonuses
+			"+4 Intellect" => "2869",
+			"+6 Intellect" => "3310",
+			"+8 Intellect" => "3353",
+			"+10 Intellect" => "4143",
+			"+20 Intellect" => "4144",
+			"+30 Intellect" => "4150",
+			// Spirit Bonuses
+			"+4 Spirit" => "2890",
+			"+6 Spirit" => "3311",
+			"+8 Spirit" => "3352",
+			"+10 Spirit" => "4142",
+			"+20 Spirit" => "4129",
+			"+30 Spirit" => "4125",
+			// Resilience Bonuses
+			"+4 Resilience" => "2878",
+			"+6 Resilience" => "3600",
+			"+8 Resilience" => "3821",
+			"+10 Resilience" => "4184",
+			"+20 Resilience" => "4185",
+			"+30 Resilience" => "4186",
+			// Need More Ratings......
 		);
 		if(array_key_exists($Bonus, $BonusMask))
 		{
