@@ -246,7 +246,7 @@ Class Parser
 		$Data['class'] = $Result['itemClass'];
 		$Data['subclass'] = $Result['itemSubClass'];
 		$Data['SoundOverrideSubclass'] = "-1";
-		$Data['name'] = $Result['name'];
+		$Data['name'] = addslashes($Result['name']);
 		$Data['displayid'] = $Result['displayInfoId'];
 		$Data['Quality'] = $Result['quality'];
 		$Data['Flags'] = "TO BE FILLED";
@@ -365,7 +365,7 @@ Class Parser
 			}
 		}
 		$Data['bonding'] = $Result['itemBind'];
-		$Data['description'] = $Result['description'];
+		$Data['description'] = addslashes($Result['description']);
 		$Data['PageText'] = "0";
 		$Data['LanguageID'] = "0";
 		$Data['PageMaterial'] = "0";
