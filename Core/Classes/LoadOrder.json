@@ -1,0 +1,16 @@
+{
+  "LoadOrder":
+  {
+    "1": "Functions.Class.php",
+    "2": "Smarty.Class.php",
+    "3": "Database.Class.php",
+    "4": "BattleNet.Class.php",
+    "5": "",
+    "6": "",
+    "7": "",
+    "8": "",
+    "9": "",
+    "10": "",
+    "11": ""
+  }
+}

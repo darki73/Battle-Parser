@@ -2,10 +2,24 @@
 
 Class Parser
 {
+	private static function GetHTTPResponseCode($url) 
+	{
+	    $headers = get_headers($url);
+	    return substr($headers[0], 9, 3);
+	}
 	public static function GetItemInfo($ItemID)
 	{
-		$ItemInfo = json_decode(file_get_contents('http://us.battle.net/api/wow/item/'.$ItemID), true);
-		return $ItemInfo;
+		$ItemURL = 'http://us.battle.net/api/wow/item/'.$ItemID;
+		if(Parser::GetHTTPResponseCode($ItemURL) != "404")
+		{
+			$GetItem = file_get_contents($ItemURL);
+			$ItemInfo = json_decode($GetItem, true);
+			return $ItemInfo;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	public static function GetSetInfo($SetID)
@@ -14,11 +28,25 @@ Class Parser
 		return $SetInfo;
 	}
 
+	public static function IFSet($SetID)
+	{
+		$Statement = Database::$DBConnection->prepare('SELECT entry FROM item_template WHERE itemset = :itemset');
+		$Statement->execute(array(':itemset' => $SetID));
+		$Result = $Statement->fetchAll(PDO::FETCH_ASSOC);
+		$ItemsInDB = array();
+		$i = 0;
+		foreach($Result as $item)
+		{
+			$i++;
+			$ItemsInDB = array_merge($ItemsInDB, array("item".$i => $item['entry']));
+		}
+		return $ItemsInDB;
+	}
+
 	public static function ISNSQL($Data)
 	{
-		echo '<textarea rows="5" cols="150" readonly>';
-		echo "INSERT INTO `item_set_names`(`entry`, `name`, `InventoryType`, `VerifiedBuild`) VALUES ('".$Data['id']."','".$Data['name']."','2','12340');";
-		echo '</textarea>';
+		$SetInfo = "INSERT INTO `item_set_names`(`entry`, `name`, `InventoryType`, `VerifiedBuild`) VALUES ('".$Data['id']."','".$Data['name']."','2','12340');";
+		return $SetInfo;
 	}
 
 	public static function FHIS($Data)

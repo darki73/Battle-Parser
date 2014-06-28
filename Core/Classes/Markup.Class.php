@@ -2,6 +2,12 @@
 
 Class Markup
 {
+	public static function Initialize()
+	{
+		echo "<head>\n<title>FreedomCore WoW Parser</title>"."\n<script type='text/javascript' src='http://static.wowhead.com/widgets/power.js'></script>\n<link href='/Assets/style.css' rel='stylesheet' type='text/css' />\n<script>\nvar wowhead_tooltips = { 'colorlinks': true, 'iconizelinks': true, 'renamelinks': true }\n</script>\n</head>\n";
+		echo "<body style='background-color: white; color: black; width:960px;'>";
+	}
+
 	public static function GenerateTooltip($Type, $ItemID, $ItemName)
 	{
 		if($ItemID != 0)

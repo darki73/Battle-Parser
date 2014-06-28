@@ -1,0 +1,16 @@
+{
+  "LoadOrder":
+  {
+    "1": "ItemParser.Module.php",
+    "2": "SetParser.Module.php",
+    "3": "SpellParser.Module.php",
+    "4": "",
+    "5": "",
+    "6": "",
+    "7": "",
+    "8": "",
+    "9": "",
+    "10": "",
+    "11": ""
+  }
+}
